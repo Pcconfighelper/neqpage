@@ -2,54 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NeqMC | Redstone Engineering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEQ // REDSTONE ENGINEERING</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #121212; color: white; margin: 0; }
-        nav { background: #1e1e1e; padding: 1rem; display: flex; justify-content: space-around; border-bottom: 2px solid #ff4444; }
-        .hero { height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1200x600'); background-size: cover; }
-        .hero h1 { font-size: 4rem; color: #ff4444; margin-bottom: 10px; }
-        .content { padding: 50px; text-align: center; max-width: 900px; margin: auto; }
-        .card-container { display: flex; gap: 20px; justify-content: center; margin-top: 30px; }
-        .card { background: #1e1e1e; padding: 20px; border-radius: 10px; width: 250px; border: 1px solid #333; }
-        .btn { background: #ff4444; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .btn:hover { background: #cc0000; }
+        /* Black & Red Technical Theme */
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #000000; color: #ffffff; margin: 0; }
+        
+        nav { background: #050505; padding: 20px; text-align: center; border-bottom: 2px solid #ff0000; }
+        nav a { color: #ff0000; margin: 0 20px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        nav a:hover { color: #fff; text-shadow: 0 0 8px #ff0000; }
+
+        .hero { 
+            padding: 80px 20px; 
+            text-align: center; 
+            background: radial-gradient(circle, #1a0000 0%, #000000 100%);
+        }
+        /* Your Profile Image Styling */
+        .profile-img { 
+            width: 180px; 
+            height: 180px; 
+            border-radius: 50%; 
+            border: 4px solid #ff0000; 
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+        
+        .hero h1 { font-size: 4rem; color: #ff0000; margin: 10px 0; text-transform: uppercase; font-weight: 900; }
+        .hero p { font-size: 1.2rem; color: #666; max-width: 600px; margin: auto; }
+
+        .section { padding: 60px 10%; text-align: center; }
+        h2 { color: #ff0000; font-size: 2.2rem; text-transform: uppercase; margin-bottom: 30px; border-left: 5px solid #ff0000; padding-left: 15px; display: inline-block; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        
+        .build-card { 
+            background: #080808; 
+            border: 1px solid #222; 
+            overflow: hidden; 
+            transition: 0.3s ease;
+        }
+        .build-card:hover { border-color: #ff0000; background: #0c0c0c; }
+        .build-card img { width: 100%; height: 200px; object-fit: cover; filter: brightness(0.7) contrast(1.2); border-bottom: 1px solid #ff0000; }
+        .build-card h3 { padding: 15px 15px 5px; color: #ff0000; font-size: 1.3rem; margin: 0; text-align: left; }
+        .build-card p { padding: 0 15px 20px; color: #888; font-size: 0.9rem; text-align: left; }
+
+        .btn-group { margin-top: 50px; display: flex; justify-content: center; gap: 20px; }
+        .btn { 
+            background: #ff0000; color: #000; padding: 15px 35px; 
+            text-decoration: none; font-weight: bold; transition: 0.3s;
+            text-transform: uppercase; font-size: 1rem;
+        }
+        .btn:hover { background: #fff; color: #ff0000; box-shadow: 0 0 15px #ff0000; }
+        .btn.discord { background: #111; color: #fff; border: 1px solid #444; }
+        .btn.discord:hover { border-color: #ff0000; color: #ff0000; }
+
+        footer { padding: 40px; text-align: center; color: #333; font-size: 0.8rem; letter-spacing: 2px; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#" style="color:white; text-decoration:none;">Home</a>
-    <a href="#" style="color:white; text-decoration:none;">Builds</a>
-    <a href="#" style="color:white; text-decoration:none;">Discord</a>
+    <a href="#builds">Archive</a>
+    <a href="https://www.youtube.com/@theneqmc">YouTube</a>
+    <a href="https://discord.gg/BxK3e32Z4V">Discord</a>
 </nav>
 
 <section class="hero">
+    <img src="theneq.jpg" alt="NeqMC Profile" class="profile-img">
     <h1>NEQ MC</h1>
-    <p>Technical Redstone & Minecraft Engineering</p>
+    <p>Pushing the limits of redstone automation. No fluff, just technical engineering.</p>
 </section>
 
-<section class="content">
-    <h2>About the Channel</h2>
-    <p>Neq is pushing the boundaries of what is possible with redstone dust and torches. From compact logic to massive industrial automation, this is the home of technical Minecraft.</p>
-    
-    <div class="card-container">
-        <div class="card">
-            <h3>Logic Gates</h3>
-            <p>Compact designs for binary computing within Minecraft.</p>
+<section class="section" id="builds">
+    <h2>The Workshop</h2>
+    <div class="grid">
+        <div class="build-card">
+            <img src="INSERT_SCREENSHOT_1_URL" alt="Project 1">
+            <h3>Piston Logic</h3>
+            <p>Compact gates and binary systems built for speed.</p>
         </div>
-        <div class="card">
-            <h3>0-Tick Farms</h3>
-            <p>Maximizing efficiency with advanced piston mechanics.</p>
+        <div class="build-card">
+            <img src="INSERT_SCREENSHOT_2_URL" alt="Project 2">
+            <h3>0-Tick Tech</h3>
+            <p>Maximum efficiency farms that break the standard rules.</p>
         </div>
-        <div class="card">
-            <h3>Door Tech</h3>
-            <p>The fastest and most seamless hidden entrances.</p>
+        <div class="build-card">
+            <img src="INSERT_SCREENSHOT_3_URL" alt="Project 3">
+            <h3>Industrial Sorting</h3>
+            <p>Massive item management systems for technical survival.</p>
         </div>
     </div>
 
-    <br><br><br>
-    <a href="https://www.youtube.com/@theneqmc" class="btn">Visit YouTube Channel</a>
+    <div class="btn-group">
+        <a href="https://www.youtube.com/@theneqmc" class="btn">Watch on YouTube</a>
+        <a href="https://discord.gg/BxK3e32Z4V" class="btn discord">Join the Discord</a>
+    </div>
 </section>
+
+<footer>
+    // SYSTEM STATUS: OPTIMAL // CREATED FOR THE NEQMC COMMUNITY
+</footer>
 
 </body>
 </html>
