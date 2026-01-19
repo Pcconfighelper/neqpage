@@ -1,98 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeqMC | 20TPS</title>
+    <title>NeqMC | Redstone</title>
     <style>
-        /* Black & Red Theme */
-        body { font-family: 'Courier New', monospace; background: #000; color: #fff; margin: 0; text-align: center; }
+        body { background: #000; color: #f00; font-family: monospace; text-align: center; margin: 0; }
+        h1 { font-size: 50px; margin: 20px 0 0; }
+        p { color: #555; margin-bottom: 40px; }
         
-        nav { padding: 20px; border-bottom: 2px solid #f00; background: #050505; }
-        nav a { color: #f00; margin: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; }
-
-        header { padding: 60px 20px; }
-        header h1 { font-size: 5rem; color: #f00; margin: 0; letter-spacing: -5px; }
-        header p { color: #555; font-size: 1.2rem; margin-top: 10px; text-transform: lowercase; }
-
-        /* THE 3-VIDEO SNIFFER GRID */
-        .video-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 15px; 
-            padding: 0 5%;
-            max-width: 1400px;
-            margin: 0 auto;
+        /* The 3 Video Grid */
+        .video-row { 
+            display: flex; 
+            gap: 10px; 
+            padding: 10px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
         }
-        .vid-card { border: 1px solid #222; background: #0a0a0a; padding: 5px; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        iframe { width: 30%; aspect-ratio: 16/9; border: 2px solid #222; }
+        iframe:hover { border-color: #f00; }
 
-        /* Archive Text */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 50px 10%; }
-        .card { border: 1px solid #111; padding: 20px; background: #050505; text-align: left; }
-        .card h3 { color: #f00; text-transform: uppercase; margin-top: 0; }
-        .card p { color: #666; font-size: 0.9rem; }
-
-        .links { padding: 40px; }
-        .btn { display: inline-block; padding: 15px 30px; border: 2px solid #f00; color: #f00; text-decoration: none; font-weight: bold; }
+        .btns { margin-top: 50px; }
+        .btn { 
+            border: 2px solid #f00; color: #f00; padding: 15px; 
+            text-decoration: none; margin: 10px; display: inline-block; 
+        }
         .btn:hover { background: #f00; color: #000; }
-
-        footer { color: #1a1a1a; padding: 40px; font-size: 0.7rem; }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="https://www.youtube.com/@theneqmc">YouTube</a>
-    <a href="https://discord.gg/BxK3e32Z4V">Discord</a>
-</nav>
-
-<header>
     <h1>NEQMC</h1>
     <p>just breaking the game with some redstone dust...</p>
-</header>
 
-<div class="video-grid">
-    <div class="vid-card">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=UUTiY8Tz4dFoPH1SPfILNaXA" allowfullscreen></iframe>
-        </div>
+    <div class="video-row">
+        <iframe src="https://www.youtube.com/embed/videoseries?list=UUTiY8Tz4dFoPH1SPfILNaXA"></iframe>
+        <iframe src="https://www.youtube.com/embed/videoseries?list=UUTiY8Tz4dFoPH1SPfILNaXA&index=1"></iframe>
+        <iframe src="https://www.youtube.com/embed/videoseries?list=UUTiY8Tz4dFoPH1SPfILNaXA&index=2"></iframe>
     </div>
-    <div class="vid-card">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=UUTiY8Tz4dFoPH1SPfILNaXA&index=1" allowfullscreen></iframe>
-        </div>
-    </div>
-    <div class="vid-card">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=UUTiY8Tz4dFoPH1SPfILNaXA&index=2" allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
 
-<div class="grid">
-    <div class="card">
-        <h3>Piston Sorcery</h3>
-        <p>High-speed doors and logic gates that open before you even press the button.</p>
+    <div class="btns">
+        <a href="https://www.youtube.com/@theneqmc" class="btn">YOUTUBE</a>
+        <a href="https://discord.gg/BxK3e32Z4V" class="btn">DISCORD</a>
     </div>
-    <div class="card">
-        <h3>Machine Logic</h3>
-        <p>Everything automated. If it's slow, it's garbage. 20tps or nothing.</p>
-    </div>
-    <div class="card">
-        <h3>Industrial Scale</h3>
-        <p>Farms that produce so many items they might actually lag your server.</p>
-    </div>
-</div>
-
-<div class="links">
-    <a href="https://www.youtube.com/@theneqmc" class="btn">Sub to Neq</a>
-</div>
-
-<footer>
-    EST. 20TPS // NEQMC FANPAGE // NO MAINTENANCE NEEDED
-</footer>
 
 </body>
 </html>
